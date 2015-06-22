@@ -1,5 +1,7 @@
 tags:
   - readme
+  - debugging
+  - pry
 languages:
   - ruby
 resources: 0
