@@ -19,14 +19,14 @@ We've already establish that Pry is a Ruby REPL, like IRB, only way more flexibl
 
 That line will get interpereted at runtime (i.e., as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
 
-Let's take a look. In this repository, you'll se a file called `pry_is_awesome.rb`. 
+Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
 
 ## Instructions Part I
 1. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. 
 
-1. Fork and clone this repository. 
+2. Fork and clone this repository. 
 
-2. Look at the code in `lib/pry_is_awesome.rb`
+3. Look at the code in `lib/pry_is_awesome.rb`
 
 You should see the following code: 
 
@@ -45,7 +45,7 @@ prying_into_the_method
 ```
 Here we are requiring `pry`, *which you must do to use pry*, defining a method and then calling that method. 
 
-* In the directory of this repo, in your terminal, run the file by typing `ruby lib/pry_is_awesome.rb`. Now, look at your terminal. You should see something like this: 
+4. In the directory of this repo, in your terminal, run the file by typing `ruby lib/pry_is_awesome.rb`. Now, look at your terminal. You should see something like this: 
 
 ```ruby
   3: def prying_into_the_method
@@ -61,12 +61,12 @@ Here we are requiring `pry`, *which you must do to use pry*, defining a method a
 
 You have frozen your program *as it executes* and are now inside a REPL *inside your program*. You basically just stopped time! How cool is that?
 
-* In the terminal, in your pry console, type the variable name `inside_the_method` and hit enter. You should see a return value of `"We're inside the method"`
+5. In the terminal, in your pry console, type the variable name `inside_the_method` and hit enter. You should see a return value of `"We're inside the method"`
 
 You are actually able to explore and manipulate the data *inside* the method in which you've placed your binding. 
 
-* Now, in the terminal, in your pry console, type the varialbe name `this_variable_hasnt_been_interpreted_yet`. You should see a return value of `nil`. That's because the binding you placed on line 7 actually froze the program on line 7 and the variable you just called hasn't been interpreted yet. Consequently, our REPL doesn't know about it. 
-* Now, in the terminal, type `exit`, and you'll leave your pry console and the program will continue to execute. 
+6 Now, in the terminal, in your pry console, type the varialbe name `this_variable_hasnt_been_interpreted_yet`. You should see a return value of `nil`. That's because the binding you placed on line 7 actually froze the program on line 7 and the variable you just called hasn't been interpreted yet. Consequently, our REPL doesn't know about it. 
+7 Now, in the terminal, type `exit`, and you'll leave your pry console and the program will continue to execute. 
 
 ## Instructions Part II: Using Pry to Debug
 
