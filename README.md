@@ -34,11 +34,12 @@ You should see the following code:
 require 'pry'
 
 def prying_into_the_method
-	puts "We're inside the method"
-	puts "We're about to stop because of pry!"
-	binding.pry
-	this_variable_hasnt_been_interpreted_yet = "The program froze be it could read me!" 
-	puts this_variable_hasnt_been_interpreted_yet
+    inside_the_method = "We're inside the method"
+    puts inside_the_method
+    puts "We're about to stop because of pry!"
+    binding.pry
+    this_variable_hasnt_been_interpreted_yet = "The program froze be it could read me!" 
+    puts this_variable_hasnt_been_interpreted_yet
 end
 
 prying_into_the_method
@@ -49,12 +50,12 @@ Here we are requiring `pry`, *which you must do to use pry*, defining a method a
 
 ```ruby
   3: def prying_into_the_method
-     4: 	inside_the_method = "We're inside the method"
-     5: 	puts inside_the_method
-     6: 	puts "We're about to stop because of pry!"
- =>  7: 	binding.pry
-     8: 	this_variable_hasnt_been_interpreted_yet = "The program froze be it could read me!" 
-     9: 	puts this_variable_hasnt_been_interpreted_yet
+     4:     inside_the_method = "We're inside the method"
+     5:     puts inside_the_method
+     6:     puts "We're about to stop because of pry!"
+ =>  7:     binding.pry
+     8:     this_variable_hasnt_been_interpreted_yet = "The program froze be it could read me!" 
+     9:     puts this_variable_hasnt_been_interpreted_yet
     10: end
 [1] pry(main)> 
 ```
@@ -78,9 +79,9 @@ Oh no! A broken program! Luckily, we have pry required at the top of our `spec/p
 
 ```ruby
 def plus_two(num)
-	num + 2
-	num 
-	binding.pry
+    num + 2
+    num 
+    binding.pry
 end
 ```
 
@@ -90,9 +91,9 @@ Now, run the test suite again and drop into your pry console. Your terminal shou
 From: /Users/sophiedebenedetto/Desktop/Dev/Ruby-Methods_and_Variables/pry-readme/lib/pry_debugging.rb @ line 4 Object#plus_two:
 
     1: def plus_two(num)
-    2: 	num + 2
-    3: 	num 
- => 4: 	binding.pry
+    2:  num + 2
+    3:  num 
+ => 4:  binding.pry
     5: end
 
 [1] pry(#<RSpec::ExampleGroups::PlusTwo>)>
