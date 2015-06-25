@@ -9,15 +9,15 @@
 
 You've already been introduced to REPLs through using IRB. REPL stands for "Read, Evaluate, Print, Loop". It is an interactive programming environment that takes a user's input, evaluates it and returns the result to the user. 
 
-Ruby installs with it's own REPL, known at IRB (which stands for Interactive Ruby), which you've been using. Every time you type `irb` into your termainal, you're entering a REPL.
+Ruby installs with it's own REPL, known at IRB (which stands for Interactive Ruby), which you've been using. Every time you type `irb` into your terminal, you're entering a REPL.
 
 Pry is another Ruby REPL with some added functionality. When you enter IRB, you are entering a brand new interactive environment. Any code you want to play with in IRB, you can to write in IRB or copy and paste into IRB. Pry, on the other hand, is like a REPL you can inject into your program. 
 
 ## What is Pry?
 
-We've already establish that Pry is a Ruby REPL, like IRB, only way more flexible. Once you install the Pry library (via the Pry gem––we'll talk about installation in a bit), you can use the following line `binding.pry` anywhere in your code. 
+We've already established that Pry is a Ruby REPL, like IRB, only way more flexible. Once you install the Pry library (via the Pry gem––we'll talk about installation in a bit), you can use the following line `binding.pry` anywhere in your code. 
 
-That line will get interpereted at runtime (i.e., as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
+That line will get interpreted at runtime (i.e., as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
 
 Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
 
@@ -66,8 +66,8 @@ You have frozen your program *as it executes* and are now inside a REPL *inside 
 
 You are actually able to explore and manipulate the data *inside* the method in which you've placed your binding. 
 
-6 Now, in the terminal, in your pry console, type the varialbe name `this_variable_hasnt_been_interpreted_yet`. You should see a return value of `nil`. That's because the binding you placed on line 7 actually froze the program on line 7 and the variable you just called hasn't been interpreted yet. Consequently, our REPL doesn't know about it. 
-7 Now, in the terminal, type `exit`, and you'll leave your pry console and the program will continue to execute. 
+Now, in the terminal, in your pry console, type the variable name `this_variable_hasnt_been_interpreted_yet`. You should see a return value of `nil`. That's because the binding you placed on line 7 actually froze the program on line 7 and the variable you just called hasn't been interpreted yet. Consequently, our REPL doesn't know about it. 
+Now, in the terminal, type `exit`, and you'll leave your pry console and the program will continue to execute. 
 
 ## Instructions Part II: Using Pry to Debug
 
