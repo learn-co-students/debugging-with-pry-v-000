@@ -2,8 +2,8 @@
 
 ## Objectives
 
-1. Understand what a REPL is
-2. Install and get familiar with using Pry to debug your programs
+1. Understand what a REPL is.
+2. Install and get familiar with using Pry to debug your programs.
 
 ## What is a REPL?
 
