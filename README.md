@@ -38,7 +38,7 @@ def prying_into_the_method
     puts inside_the_method
     puts "We're about to stop because of pry!"
     binding.pry
-    this_variable_hasnt_been_interpreted_yet = "The program froze be it could read me!" 
+    this_variable_hasnt_been_interpreted_yet = "The program froze before it could read me!" 
     puts this_variable_hasnt_been_interpreted_yet
 end
 
@@ -54,7 +54,7 @@ Here we are requiring `pry`, *which you must do to use pry*, defining a method a
      5:     puts inside_the_method
      6:     puts "We're about to stop because of pry!"
  =>  7:     binding.pry
-     8:     this_variable_hasnt_been_interpreted_yet = "The program froze be it could read me!" 
+     8:     this_variable_hasnt_been_interpreted_yet = "The program froze before it could read me!" 
      9:     puts this_variable_hasnt_been_interpreted_yet
     10: end
 [1] pry(main)> 
