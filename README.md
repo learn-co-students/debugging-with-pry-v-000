@@ -2,29 +2,31 @@
 
 ## Objectives
 
-1. Understand what a REPL is.
-2. Install and get familiar with using Pry to debug your programs.
+1. Review REPLs (e.g. IRB).
+2. Install Pry, another REPL.
+3. Use Pry to debug a program.
 
-## What is a REPL?
+## What Is a REPL?
 
-You've already been introduced to REPLs through using IRB. REPL stands for "Read, Evaluate, Print, Loop". It is an interactive programming environment that takes a user's input, evaluates it and returns the result to the user. 
+You've already been introduced to REPLs through using IRB (Interactive Ruby). REPL stands for *Read, Evaluate, Print, Loop*. It is an interactive programming environment that takes a user's input, evaluates it and returns the result to the user. 
 
-Ruby installs with it's own REPL, known at IRB (which stands for Interactive Ruby), which you've been using. Every time you type `irb` into your terminal, you're entering a REPL.
+Ruby installs with it's own REPL, which is IRB, that you've already been using. Every time you type `irb` into your terminal, you're entering into a REPL.
 
-Pry is another Ruby REPL with some added functionality. When you enter IRB, you are entering a brand new interactive environment. Any code you want to play with in IRB, you can to write in IRB or copy and paste into IRB. Pry, on the other hand, is like a REPL you can inject into your program. 
+## What Is Pry?
 
-## What is Pry?
+Pry is another Ruby REPL with some added functionality. When you enter IRB, you are entering a brand new interactive environment. Any code you want to play with in IRB, you can to write in IRB or copy and paste into IRB. Pry, on the other hand, is like a REPL that you can inject into your program. 
 
-We've already established that Pry is a Ruby REPL, like IRB, only way more flexible. Once you install the Pry library (via the Pry gem––we'll talk about installation in a bit), you can use the following line `binding.pry` anywhere in your code. 
+Pry is far more flexible than IRB. Once you install the Pry library (via the Pry gem—we'll walk through installation in a bit), you can use the following line `binding.pry` anywhere in your code. 
 
-That line will get interpreted at runtime (i.e., as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
+That line will get interpreted at runtime (as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
 
 Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
 
 ## Instructions Part I
-1. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. 
 
-2. Fork and clone this repository. 
+1. Fork and clone this repository. 
+
+2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. 
 
 3. Look at the code in `lib/pry_is_awesome.rb`
 
@@ -44,7 +46,7 @@ end
 
 prying_into_the_method
 ```
-Here we are requiring `pry`, *which you must do to use pry*, defining a method and then calling that method. 
+Here we are requiring `pry`, *which you must do to use pry*, defining a method, and then calling that method. 
 
 4. In the directory of this repo, in your terminal, run the file by typing `ruby lib/pry_is_awesome.rb`. Now, look at your terminal. You should see something like this: 
 
@@ -71,11 +73,11 @@ Now, in the terminal, type `exit`, and you'll leave your pry console and the pro
 
 ## Instructions Part II: Using Pry to Debug
 
-You can imagine how helpful it will by to use pry to freeze programs and pry open methods to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and clone down onto your computer, you'll see a spec folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
+You can imagine how helpful it will by to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
 
 In that file, we have a broken method. Run `rspec` or `learn` to see the failing test. 
 
-Oh no! A broken program! Luckily, we have pry required at the top of our `spec/pry_debugging_spec.rb` file, and we know how to use it. Let's place a `binding.pry` right before the `end` keyword like this. 
+Oh no! A broken program! Luckily, we have Pry required at the top of our `spec/pry_debugging_spec.rb` file, and we know how to use it. Let's place a `binding.pry` right before the `end` keyword like this. 
 
 ```ruby
 def plus_two(num)
@@ -85,7 +87,7 @@ def plus_two(num)
 end
 ```
 
-Now, run the test suite again and drop into your pry console. Your terminal should look like this: 
+Now, run the test suite again and drop into your Pry console. Your terminal should look like this: 
 
 ```ruby
 From: /Users/sophiedebenedetto/Desktop/Dev/Ruby-Methods_and_Variables/pry-readme/lib/pry_debugging.rb @ line 4 Object#plus_two:
@@ -99,7 +101,7 @@ From: /Users/sophiedebenedetto/Desktop/Dev/Ruby-Methods_and_Variables/pry-readme
 [1] pry(#<RSpec::ExampleGroups::PlusTwo>)>
 ```
 
-The test is calling our `plus_two` method with an argument of 3 and expecting a return value of 5. We remember that the return value of a method in Ruby is generally the value of the last line of the method. Let's check our current return value of typing `num` into our pry console. You should see something like this: 
+The test is calling our `plus_two` method with an argument value of `3` and expecting a return value of `5`. We remember that the return value of a method in Ruby is generally the value of the last line of the method. Let's check our current return value by typing `num` into our Pry console. You should see something like this: 
 
 ```ruby
 [1] pry(#<RSpec::ExampleGroups::PlusTwo>)> num
@@ -109,7 +111,7 @@ The test is calling our `plus_two` method with an argument of 3 and expecting a 
 
 By checking the value of the variable on the last line of our method inside our pry console, we can see that `num` is set to `3` and therefore the method is returning `3`. 
 
-How can we fix this method so that is behaves in the expected way? Play around with it inside your pry console and get the test to pass. Remember to type `exit` in your terminal and then remove your `binding.pry` when you think your test will pass. 
+How can we fix this method so that is behaves in the expected way? Play around with it inside your Pry console and get the test to pass. Remember to type `exit` in your terminal and then remove your `binding.pry` when you think your test will pass. 
 
 Once you have your test passing, make sure the `binding.pry` line has been removed and add, commit and push your changes. Then open a pull request. 
 
