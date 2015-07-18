@@ -28,7 +28,7 @@ Let's take a look. In this repository, you'll see a file called `pry_is_awesome.
 
 2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. 
 
-3. Look at the code in `lib/pry_is_awesome.rb`
+3. Head back to the lab and look at the code in `lib/pry_is_awesome.rb`
 
 You should see the following code: 
 
