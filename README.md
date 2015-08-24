@@ -14,7 +14,7 @@ Ruby installs with it's own REPL, which is IRB, that you've already been using. 
 
 ## What Is Pry?
 
-Pry is another Ruby REPL with some added functionality. When you enter IRB, you are entering a brand new interactive environment. Any code you want to play with in IRB, you can write in IRB or copy and paste into IRB. Pry, on the other hand, is like a REPL that you can inject into your program. 
+Pry is another Ruby REPL with some added functionality. When you enter IRB, you are entering a brand new interactive environment. Any code you want to play with in IRB, you have to write in IRB or copy and paste into IRB. Pry, on the other hand, is like a REPL that you can inject into your program. 
 
 Pry is far more flexible than IRB. Once you install the Pry library (via the Pry gem—we'll walk through installation in a bit), you can use the following line `binding.pry` anywhere in your code. 
 
