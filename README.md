@@ -73,7 +73,7 @@ Now, in the terminal, type `exit`, and you'll leave your pry console and the pro
 
 ## Instructions Part II: Using Pry to Debug
 
-You can imagine how helpful it will by to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
+You can imagine how helpful it will be to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
 
 In that file, we have a broken method. Run `rspec` or `learn` to see the failing test. 
 
