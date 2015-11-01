@@ -1,10 +1,14 @@
 # Debugging with Pry
 
+## Overview
+
+We'll cover Pry, a type of REPL, and discuss how to install and use it to debug a program. 
+
 ## Objectives
 
-1. Review REPLs (e.g. IRB).
-2. Install Pry, another REPL.
-3. Use Pry to debug a program.
+1. Explain how Pry is a more flexible REPL than IRB. 
+2. Install Pry on your computer.
+3. Debug a program using binding.pry within the body of your file.
 
 ## What Is a REPL?
 
@@ -75,7 +79,7 @@ Now, in the terminal, type `exit`, and you'll leave your pry console and the pro
 
 You can imagine how helpful it will be to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
 
-In that file, we have a broken method. Run `rspec` or `learn` to see the failing test. 
+In that file, we have a broken method. Run `learn` to see the failing test. 
 
 Oh no! A broken program! Luckily, we have Pry required at the top of our `spec/pry_debugging_spec.rb` file, and we know how to use it. Let's place a `binding.pry` right before the `end` keyword like this. 
 
