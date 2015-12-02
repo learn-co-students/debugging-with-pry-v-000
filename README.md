@@ -126,3 +126,5 @@ Once you have your test passing, make sure the `binding.pry` line has been remov
 <iframe src="https://player.vimeo.com/video/26391171?title=0&byline=0&portrait=0" width="100%" height="750" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 * [Pry documentation](http://pryrepl.org/)
+
+<a href='https://learn.co/lessons/debugging-with-pry' data-visibility='hidden'>View this lesson on Learn.co</a>
