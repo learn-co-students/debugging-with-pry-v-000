@@ -105,7 +105,7 @@ From: /Users/sophiedebenedetto/Desktop/Dev/Ruby-Methods_and_Variables/pry-readme
 [1] pry(#<RSpec::ExampleGroups::PlusTwo>)>
 ```
 
-The test is calling our `plus_two` method with an argument value of `3` and expecting a return value of `5`. We remember that the return value of a method in Ruby is generally the value of the last line of the method. Let's check our current return value by typing `num` into our Pry console. You should see something like this: 
+The test is calling our `plus_two` method with the argument, `num`,  the value of `num` set to `3`, and the expected return value of `5`. We remember that the return value of a method in Ruby is generally the value of the last line of the method. Let's check our current return value by typing `num` into our Pry console. You should see something like this: 
 
 ```ruby
 [1] pry(#<RSpec::ExampleGroups::PlusTwo>)> num
@@ -115,9 +115,9 @@ The test is calling our `plus_two` method with an argument value of `3` and expe
 
 By checking the value of the variable on the last line of our method inside our pry console, we can see that `num` is set to `3` and therefore the method is returning `3`. 
 
-How can we fix this method so that is behaves in the expected way? This method is called `plus_two` and the test is expecting a return value of `5`, given a `num` of `3`. Looks like our method should return the *sum* of the original number, plus 2, but our method, as it currently stands, is returning the original number. Play around with it inside your Pry console and get the test to pass. Remember to type `exit` in your terminal and then remove your `binding.pry` when you think your test will pass. 
+How can we fix this method so that it behaves in the expected way? This method is called `plus_two` and the test is expecting a return value of `5`, given a `num` of `3`. Looks like our method should return the *sum* of the original number (`3`) plus 2. But our method, as it currently stands, is returning the original number. Play around with it inside your Pry console and get the test to pass. Remember to type `exit` in your terminal and then remove your `binding.pry` when you think your test will pass. 
 
-Once you have your test passing, make sure the `binding.pry` line has been removed and add, commit and push your changes. Then open a pull request. 
+Once you have your test passing, make sure the `binding.pry` line has been removed and add commit and push your changes. Then open a pull request. 
 
 ## Resources
 
