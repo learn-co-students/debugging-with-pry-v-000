@@ -24,7 +24,7 @@ Pry is far more flexible than IRB. Once you install the Pry library (via the Pry
 
 ## Wait... What's 'binding'? 
 
-Binding is a built in ruby class whoes objects can encapsulate the context of your current scope (variables, methods etc.), and retain them for use outside of that context. 
+Binding is a built-in ruby class whose objects can encapsulate the context of your current scope (variables, methods etc.), and retain them for use outside of that context. 
 
 Calling `binding.pry` is essentially 'prying' into the current binding or context of the code, from outside your file.
 
