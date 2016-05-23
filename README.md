@@ -22,7 +22,13 @@ Pry is another Ruby REPL with some added functionality. When you enter IRB, you 
 
 Pry is far more flexible than IRB. Once you install the Pry library (via the Pry gem—we'll walk through installation in a bit), you can use the following line `binding.pry` anywhere in your code. 
 
-That line will get interpreted at runtime (as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
+#### Wait... what's `binding`? 
+
+Binding is a built in ruby class whoes objects can encapsulate the context of your current scope (variables, methods etc.), and retain them for use outside of that context. 
+
+Calling `binding.pry` is essentially 'prying' into the current binding or context of code, from outside your file.
+
+So when you place the line `binding.pry` in your code, that line will get interpreted at runtime (as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
 
 Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
 
