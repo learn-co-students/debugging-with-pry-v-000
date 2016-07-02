@@ -1,0 +1,28 @@
+
+[1mFrom:[0m /usr/local/rvm/gems/ruby-2.3.0/gems/pry-nav-0.2.4/lib/pry-nav/tracer.rb @ line 21 PryNav::Tracer#run:
+
+    [1;34m12[0m: [32mdef[0m [1;34mrun[0m(&block)
+    [1;34m13[0m:   [1;34m# For performance, disable any tracers while in the console.[0m
+    [1;34m14[0m:   [1;34m# Unfortunately doesn't work in 1.9.2 because of[0m
+    [1;34m15[0m:   [1;34m# http://redmine.ruby-lang.org/issues/3921. Works fine in 1.8.7 and 1.9.3.[0m
+    [1;34m16[0m:   stop [32munless[0m [1;36mRUBY_VERSION[0m == [31m[1;31m'[0m[31m1.9.2[1;31m'[0m[31m[0m
+    [1;34m17[0m: 
+    [1;34m18[0m:   return_value = [1;36mnil[0m
+    [1;34m19[0m:   command = catch([33m:breakout_nav[0m) [32mdo[0m      [1;34m# Coordinates with PryNav::Commands[0m
+    [1;34m20[0m:     return_value = [32myield[0m
+ => [1;34m21[0m:     {}    [1;34m# Nothing thrown == no navigational command[0m
+    [1;34m22[0m:   [32mend[0m
+    [1;34m23[0m: 
+    [1;34m24[0m:   [1;34m# Adjust tracer based on command[0m
+    [1;34m25[0m:   [32mif[0m process_command(command)
+    [1;34m26[0m:     start
+    [1;34m27[0m:   [32melse[0m
+    [1;34m28[0m:     stop [32mif[0m [1;36mRUBY_VERSION[0m == [31m[1;31m'[0m[31m1.9.2[1;31m'[0m[31m[0m
+    [1;34m29[0m:     [32mif[0m @pry_start_options[[33m:pry_remote[0m] && [1;34;4mPryNav[0m.current_remote_server
+    [1;34m30[0m:       [1;34;4mPryNav[0m.current_remote_server.teardown
+    [1;34m31[0m:     [32mend[0m
+    [1;34m32[0m:   [32mend[0m
+    [1;34m33[0m: 
+    [1;34m34[0m:   return_value
+    [1;34m35[0m: [32mend[0m
+
