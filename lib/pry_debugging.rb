@@ -1,4 +1,4 @@
-num = #{i}
+
 
 def plus_two(num)
 
