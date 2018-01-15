@@ -1,4 +1,8 @@
+
+
 def plus_two(num)
 	num + 2
-	num
+## commented out rb: 6 & 7 to make the tests pass 
+	# num
+	# binding.pry
 end
