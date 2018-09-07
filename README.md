@@ -34,11 +34,23 @@ Let's take a look. In this repository, you'll see a file called `pry_is_awesome.
 
 ## Instructions Part I
 
+<div class="readme-content-test--show-when-active">
+    
+1. Ensure that you're in the project "root" directory by issuing `cd`
+    
+2. Verify that 'pry' is installed: `gem list pry`: you should see something like `pry (0.11.3)`. The LearnIDE already has PRY installed.
+
+</div>
+    
+<div class="readme-content-test--hide-when-active">
+    
 1. Fork and clone this repository. 
 
 2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. 
 
-3. Now that pry is installed, navigate back to the lab `debugging-with-pry` and look at the code in `lib/pry_is_awesome.rb`
+</div>
+
+3. Look at the code in `lib/pry_is_awesome.rb`
 
 You should see the following code: 
 
