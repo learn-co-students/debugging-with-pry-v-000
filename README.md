@@ -7,7 +7,7 @@ We'll cover Pry, a type of REPL, and discuss how to install and use it to debug 
 ## Objectives
 
 1. Explain how Pry is a more flexible REPL than IRB. 
-2. Install Pry on your computer.
+2. Install Pry on your computer. (already installed for IDE users)
 3. Debug a program using binding.pry within the body of your file.
 
 ## What Is a REPL?
@@ -46,7 +46,7 @@ Let's take a look. In this repository, you'll see a file called `pry_is_awesome.
     
 1. Fork and clone this repository.   
 
-2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`.  
+2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. (again, no need to do this if you are working in the IDE)
 </div>
 
 3. Look at the code in `lib/pry_is_awesome.rb`
