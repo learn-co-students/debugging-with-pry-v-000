@@ -7,7 +7,7 @@ We'll cover Pry, a type of REPL, and discuss how to install and use it to debug 
 ## Objectives
 
 1. Explain how Pry is a more flexible REPL than IRB. 
-2. Install Pry on your computer.
+2. Install Pry on your computer. (already installed for IDE users)
 3. Debug a program using binding.pry within the body of your file.
 
 ## What Is a REPL?
@@ -22,17 +22,34 @@ Pry is another Ruby REPL with some added functionality. When you enter IRB, you 
 
 Pry is far more flexible than IRB. Once you install the Pry library (via the Pry gem—we'll walk through installation in a bit), you can use the following line `binding.pry` anywhere in your code. 
 
-That line will get interpreted at runtime (as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
+## Wait... What's 'binding'? 
+
+Binding is a built-in ruby class whose objects can encapsulate the context of your current scope (variables, methods etc.), and retain them for use outside of that context. 
+
+Calling `binding.pry` is essentially 'prying' into the current binding or context of the code, from outside your file.
+
+So when you place the line `binding.pry` in your code, that line will get interpreted at runtime (as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
 
 Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
 
 ## Instructions Part I
 
-1. Fork and clone this repository. 
+<div class="readme-content-test--show-when-active">
+    
+1. Ensure that you're in the project "root" directory by issuing `cd` . 
+    
+2. Verify that 'pry' is installed: `gem list pry`: you should see something like `pry (0.11.3)`. The LearnIDE already has PRY installed.  
 
-2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. 
+</div>
+    
+<div class="readme-content-test--hide-when-active">
+    
+1. Fork and clone this repository.   
 
-3. Head back to the lab and look at the code in `lib/pry_is_awesome.rb`
+2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. (again, no need to do this if you are working in the IDE)
+</div>
+
+3. Look at the code in `lib/pry_is_awesome.rb`
 
 You should see the following code: 
 
@@ -105,7 +122,7 @@ From: /Users/sophiedebenedetto/Desktop/Dev/Ruby-Methods_and_Variables/pry-readme
 [1] pry(#<RSpec::ExampleGroups::PlusTwo>)>
 ```
 
-The test is calling our `plus_two` method with an argument value of `3` and expecting a return value of `5`. We remember that the return value of a method in Ruby is generally the value of the last line of the method. Let's check our current return value by typing `num` into our Pry console. You should see something like this: 
+The test is calling our `plus_two` method with the argument, `num`,  the value of `num` set to `3`, and the expected return value of `5`. We remember that the return value of a method in Ruby is generally the value of the last line of the method. Let's check our current return value by typing `num` into our Pry console. You should see something like this: 
 
 ```ruby
 [1] pry(#<RSpec::ExampleGroups::PlusTwo>)> num
@@ -115,14 +132,13 @@ The test is calling our `plus_two` method with an argument value of `3` and expe
 
 By checking the value of the variable on the last line of our method inside our pry console, we can see that `num` is set to `3` and therefore the method is returning `3`. 
 
-How can we fix this method so that is behaves in the expected way? This method is called `plus_two` and the test is expecting a return value of `5`, given a `num` of `3`. Looks like our method should return the *sum* of the original number, plus 2, but our method, as it currently stands, is returning the original number. Play around with it inside your Pry console and get the test to pass. Remember to type `exit` in your terminal and then remove your `binding.pry` when you think your test will pass. 
+How can we fix this method so that it behaves in the expected way? This method is called `plus_two` and the test is expecting a return value of `5`, given a `num` of `3`. Looks like our method should return the *sum* of the original number (`3`) plus 2. But our method, as it currently stands, is returning the original number. Play around with it inside your Pry console and get the test to pass. Remember to type `exit` in your terminal and then remove your `binding.pry` when you think your test will pass. 
 
-Once you have your test passing, make sure the `binding.pry` line has been removed and add, commit and push your changes. Then open a pull request. 
+Once you have your test passing, make sure the `binding.pry` line has been removed and add commit and push your changes. Then open a pull request. 
 
-## Resources
 
-* Watch [this video on pry](http://vimeo.com/26391171). Only watch the first three sections (install, features, as a debugger), we'll cover using Pry in Rails later when it will make more sense.
-
-<iframe src="https://player.vimeo.com/video/26391171?title=0&byline=0&portrait=0" width="100%" height="750" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+## Resources 
 
 * [Pry documentation](http://pryrepl.org/)
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/debugging-with-pry' title='Debugging with Pry'>Debugging with Pry</a> on Learn.co and start learning to code for free.</p>
