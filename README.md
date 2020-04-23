@@ -44,7 +44,7 @@ Let's take a look. In this repository, you'll see a file called `pry_is_awesome.
     
 <div class="readme-content-test--hide-when-active">
     
-1. Fork and clone this repository.   
+1. Fork and clone [this repository](https://github.com/learn-co-students/debugging-with-pry-v-000).   
 
 2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. (again, no need to do this if you are working in the IDE)
 </div>
