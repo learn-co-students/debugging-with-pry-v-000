@@ -33,21 +33,10 @@ So when you place the line `binding.pry` in your code, that line will get interp
 Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
 
 ## Instructions Part I
-
-<div class="readme-content-test--show-when-active">
-    
-1. Ensure that you're in the project "root" directory by issuing `cd` into the cloned directory. 
-    
-2. Verify that 'pry' is installed: `gem list pry`: you should see something like `pry (0.11.3)`. The LearnIDE already has PRY installed.  
-
-</div>
-    
-<div class="readme-content-test--hide-when-active">
-    
+        
 1. Fork and clone this repository.   
 
-2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. (again, no need to do this if you are working in the IDE)
-</div>
+2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. (No need to do this if you are working in the IDE)
 
 3. Look at the code in `lib/pry_is_awesome.rb`
 
@@ -96,7 +85,7 @@ Now, in the terminal, type `exit`, and you'll leave your pry console and the pro
 
 You can imagine how helpful it will be to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
 
-In `pry_debugging.rb`, we have a broken method. Run `learn` to see the failing test. 
+In `pry_debugging.rb`, we have a broken method. Run `learn test` to see the failing test. 
 
 Oh no! A broken program! Luckily, we have Pry required at the top of our `spec/pry_debugging_spec.rb` file, and we know how to use it. Let's place a `binding.pry` right before the `end` keyword like this. 
 
