@@ -130,4 +130,4 @@ Once you have your test passing, make sure the `binding.pry` line has been remov
 
 * [Pry documentation](http://pryrepl.org/)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/debugging-with-pry' title='Debugging with Pry'>Debugging with Pry</a> on Learn.co and start learning to code for free.</p>
+
