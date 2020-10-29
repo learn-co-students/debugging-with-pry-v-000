@@ -129,5 +129,5 @@ Once you have your test passing, make sure the `binding.pry` line has been remov
 ## Resources 
 
 * [Pry documentation](http://pry.github.io/)
-* [Debugging with Pry: A Beginner's Guide] (https://dev.to/elimerrell/debugging-with-pry-a-beginners-guide-3p99)
+* [Debugging with Pry: A Beginner's Guide](https://dev.to/elimerrell/debugging-with-pry-a-beginners-guide-3p99)
 
