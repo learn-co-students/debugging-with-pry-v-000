@@ -1,4 +1,6 @@
 def plus_two(num)
-	num + 2
+	return num + 2
+	print num + 2
 	num
+
 end
