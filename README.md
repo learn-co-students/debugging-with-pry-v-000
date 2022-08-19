@@ -7,7 +7,7 @@ We'll cover Pry, a type of REPL, and discuss how to install and use it to debug 
 ## Objectives
 
 1. Explain how Pry is a more flexible REPL than IRB. 
-2. Install Pry on your computer.
+2. Install Pry on your computer. (already installed for IDE users)
 3. Debug a program using binding.pry within the body of your file.
 
 ## What Is a REPL?
@@ -33,12 +33,12 @@ So when you place the line `binding.pry` in your code, that line will get interp
 Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
 
 ## Instructions Part I
+        
+1. Fork and clone this repository.   
 
-1. Fork and clone this repository. 
+2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. (No need to do this if you are working in the IDE)
 
-2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. 
-
-3. Now that pry is installed, navigate back to the lab `debugging-with-pry` and look at the code in `lib/pry_is_awesome.rb`
+3. Look at the code in `lib/pry_is_awesome.rb`
 
 You should see the following code: 
 
@@ -85,7 +85,7 @@ Now, in the terminal, type `exit`, and you'll leave your pry console and the pro
 
 You can imagine how helpful it will be to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
 
-In that file, we have a broken method. Run `learn` to see the failing test. 
+In `pry_debugging.rb`, we have a broken method. Run `learn test` to see the failing test. 
 
 Oh no! A broken program! Luckily, we have Pry required at the top of our `spec/pry_debugging_spec.rb` file, and we know how to use it. Let's place a `binding.pry` right before the `end` keyword like this. 
 
@@ -128,6 +128,6 @@ Once you have your test passing, make sure the `binding.pry` line has been remov
 
 ## Resources 
 
-* [Pry documentation](http://pryrepl.org/)
+* [Pry documentation](http://pry.github.io/)
+* [Debugging with Pry: A Beginner's Guide](https://dev.to/elimerrell/debugging-with-pry-a-beginners-guide-3p99)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/debugging-with-pry' title='Debugging with Pry'>Debugging with Pry</a> on Learn.co and start learning to code for free.</p>
